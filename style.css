@@ -1,0 +1,20 @@
+body {
+  background: local;
+}
+
+.card-header {
+  width: 100%;
+}
+.corto {
+  display: block;
+}
+.pad1 {
+  margin: 5px;
+}
+
+.top1 {
+  margin-top: 5px;
+}
+.top2 {
+  margin-top: 10px;
+}
