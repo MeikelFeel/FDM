@@ -3,7 +3,7 @@
   <head>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script> 
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script> 
-
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,11 +21,15 @@
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="data:image/png;base64,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" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="./sources/descarga.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
             FDM
           </a>
+          <ul>
+          <li><h6 id="user">Iniciá Sesión</h6></li>
+          <li><img src="./sources/descarga.png" alt="" width="35" height="35" style="margin-left: 5px;" id="pic"></li>
+          </ul>
         </div>
-      </nav>
+       
     </header>
     <div class="container top2">
       <div class="row">
@@ -33,18 +37,14 @@
           <div class="card">
             <div class="card-header ">Registro de gastos</div>
             <div class="card-body">
-              <input
-                class="top1 corto"
-                type="text"
-                placeholder="monto"
-                id="monto"
-              />
-              <input
-                class="top1 corto"
-                type="text"
-                placeholder="Descripción"
-                id="categoria"
-              />
+              <div class="input-group flex-nowrap top2">
+                <span class="input-group-text centro">Monto</span>
+                <input id="monto" type="number" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+              <div class="input-group flex-nowrap top2">
+                <span class="input-group-text">Concepto</span>
+                <input id="categoria" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
               <button class="btn btn-primary top2" id="guardar">Guardar</button>
             </div>
           </div>

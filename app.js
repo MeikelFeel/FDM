@@ -12,7 +12,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let monto = document.getElementById("monto");
+let user = document.getElementById("user");
+let mail;
 let categoria = document.getElementById("categoria");
+let usuario = {};
+let pic = document.getElementById("pic");
+
 let guardar = document.getElementById("guardar");
 guardar.addEventListener("click", (e) => {
   e.preventDefault();
@@ -22,7 +27,18 @@ guardar.addEventListener("click", (e) => {
 function guardaRegistro() {
   let valor = monto.value;
   let cat = categoria.value;
-  console.log(cat);
+  mail = usuario.user.email;
+
+  const record = {
+    cuanto: valor,
+    que: cat,
+    quien: mail,
+  };
+
+  const db = firebase.database();
+  const dbRef = db.ref("registros");
+  const newRegistro = dbRef.push();
+  newRegistro.set(record);
 }
 
 let logGoogle = document.getElementById("login");
@@ -36,6 +52,10 @@ function loguearConGoogle() {
   firebase
     .auth()
     .signInWithPopup(provider)
-    .then((result) => console.log("logueo"))
+    .then((result) => {
+      usuario = result;
+      user.innerHTML = usuario.user.displayName;
+      pic.src = usuario.user.photoURL;
+    })
     .catch((error) => console.log(error.message));
 }
