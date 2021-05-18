@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script> 
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script> 
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,31 +21,81 @@
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="./sources/descarga.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <img
+              src="./sources/descarga.png"
+              alt=""
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
             FDM
           </a>
+
           <ul>
-          <li><h6 id="user">Iniciá Sesión</h6></li>
-          <li><img src="./sources/descarga.png" alt="" width="35" height="35" style="margin-left: 5px;" id="pic"></li>
+            <li><h6 id="user"></h6></li>
+            <li class="dropstart">
+              <h6 id="user"></h6>
+              <a
+                class="btn"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                role="button"
+              >
+                <img src="./sources/descarga.png" alt="" id="pic" />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-left"
+                aria-labelledby="dropdownMenuButton1"
+                id="user-dropdown"
+              >
+                <li>
+                  <a id="navLogin" class="dropdown-item" href="#"
+                    >Iniciar Sesión</a
+                  >
+                </li>
+                <li>
+                  <a id="navLogout" role="button" class="dropdown-item" href="#"
+                    >Cerrar Sesión</a
+                  >
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
-       
+      </nav>
     </header>
+
     <div class="container top2">
       <div class="row">
         <div class="col-md-6">
           <div class="card">
-            <div class="card-header ">Registro de gastos</div>
+            <div class="card-header">Registro de gastos</div>
             <div class="card-body">
               <div class="input-group flex-nowrap top2">
                 <span class="input-group-text centro">Monto</span>
-                <input id="monto" type="number" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+                <input
+                  id="monto"
+                  type="number"
+                  class="form-control"
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                />
               </div>
               <div class="input-group flex-nowrap top2">
                 <span class="input-group-text">Concepto</span>
-                <input id="categoria" type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+                <input
+                  id="categoria"
+                  type="text"
+                  class="form-control"
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                />
               </div>
-              <button class="btn btn-primary top2" id="guardar">Guardar</button>
+              <button class="btn btn-primary float-end top2" id="guardar">
+                Guardar
+              </button>
             </div>
           </div>
         </div>
@@ -61,14 +111,11 @@
       </div>
       <br />
       <div class="row">
-        <div class="col-md-4">
-          </div>
-        </div>
+        <div class="col-md-4"></div>
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">Ingresa</div>
             <button class="btn btn-primary pad1" id="login">Login</button>
-            </div>
           </div>
         </div>
       </div>

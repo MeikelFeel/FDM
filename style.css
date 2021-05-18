@@ -34,6 +34,8 @@ ul {
 
 #pic {
   border-radius: 50%;
+  height: 35px;
+  width: 35px;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -50,4 +52,9 @@ input[type="number"] {
 .input-group-text {
   width: 100px;
   display: inline-block;
+}
+
+#user-dropdown {
+  margin-top: 46px;
+  right: 18%;
 }

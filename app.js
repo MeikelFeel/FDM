@@ -17,11 +17,18 @@ let mail;
 let categoria = document.getElementById("categoria");
 let usuario = {};
 let pic = document.getElementById("pic");
-
+let navLogin = document.getElementById("navLogin");
+let navLogout = document.getElementById("navLogout");
 let guardar = document.getElementById("guardar");
+
 guardar.addEventListener("click", (e) => {
   e.preventDefault();
   guardaRegistro();
+});
+
+navLogin.addEventListener("click", (e) => {
+  e.preventDefault();
+  loguearConGoogle();
 });
 
 function guardaRegistro() {
