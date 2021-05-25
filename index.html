@@ -32,9 +32,8 @@
           </a>
 
           <ul>
-            <li><h6 id="user"></h6></li>
+            <li><h6 id="user">Iniciá Sesión</h6></li>
             <li class="dropstart">
-              <h6 id="user"></h6>
               <a
                 class="btn"
                 type="button"
@@ -68,7 +67,7 @@
     </header>
 
     <div class="container top2">
-      <div class="row">
+      <div class="row" id="fila1">
         <div class="col-md-6">
           <div class="card">
             <div class="card-header">Registro de gastos</div>
@@ -103,19 +102,53 @@
           <div class="card">
             <div class="card-header">Saldo</div>
             <div class="card-body">
-              <h2>$32.349</h2>
-              <a href="#" class="btn btn-primary">Movimientos</a>
+              <h2 id="saldo">$32.349</h2>
             </div>
           </div>
         </div>
       </div>
       <br />
-      <div class="row">
+      <div class="row" id="loginCard">
         <div class="col-md-4"></div>
         <div class="col-md-4">
           <div class="card">
-            <div class="card-header">Ingresa</div>
+            <div class="card-header" id="loginCardHead">Ingresa</div>
             <button class="btn btn-primary pad1" id="login">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" id="movimientos">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header" id="loginCardHead">Movimientos</div>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td class="mov1">
+                    <img src="./sources/descarga.png" class="picGasto" alt="" />
+                  </td>
+                  <td>Supermercado</td>
+                  <td class="text-end">$473</td>
+                </tr>
+                <tr>
+                  <td class="mov1">
+                    <img src="./sources/descarga.png" class="picGasto" alt="" />
+                  </td>
+                  <td>Droga</td>
+                  <td class="text-end">$15000</td>
+                </tr>
+                <tr>
+                  <td class="mov1">
+                    <img src="./sources/descarga.png" class="picGasto" alt="" />
+                  </td>
+                  <td>PC de la muerte</td>
+                  <td class="text-end">$430000</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

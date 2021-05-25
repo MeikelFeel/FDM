@@ -55,6 +55,40 @@ input[type="number"] {
 }
 
 #user-dropdown {
-  margin-top: 46px;
+  margin-top: 55px;
   right: 18%;
+}
+#loginCardHead {
+  text-align: center;
+}
+#fila1 {
+  display: none;
+}
+.container {
+  width: 80%;
+}
+.container-fluid {
+  width: 90%;
+}
+
+.dropdown-menu {
+  text-align: center;
+}
+#navLogout {
+  display: none;
+}
+.picGasto {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+.li-movimientos {
+  display: inline;
+}
+
+.monto {
+  text-align: right;
+}
+.mov1 {
+  width: 12%;
 }
